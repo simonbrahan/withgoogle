@@ -13,11 +13,6 @@ def get_guess():
 
         normalised_guess = guess.upper()
 
-        if normalised_guess in guesses:
-            print("You already made that guess")
-            continue
-
-        guesses.add(normalised_guess)
         return normalised_guess
 
 
@@ -53,6 +48,12 @@ while True:
         else:
             print "You have %d guesses remaining" % (max_incorrect_guesses - num_incorrect_guesses)
             continue
+
+    if guess in guesses:
+        print("You already made that guess")
+        continue
+
+    guesses.add(guess)
 
     print "Good guess"
 
