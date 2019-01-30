@@ -1,3 +1,6 @@
+# Unique binary tree
+# Will store unique values only
+# has flatten() method to return values as a list
 class UBTree:
     @staticmethod
     def fromArr(arr):
