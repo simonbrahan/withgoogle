@@ -1,8 +1,14 @@
 from random import sample
+from sys import argv
 
-width = 20
-height = 17
-num_mines = 20
+if len(argv) == 4:
+    width = int(argv[1])
+    height = int(argv[2])
+    num_mines = int(argv[3])
+else:
+    width = 20
+    height = 17
+    num_mines = 20
 
 def contains_mine(x, y):
     return y * height + x in mine_poses
